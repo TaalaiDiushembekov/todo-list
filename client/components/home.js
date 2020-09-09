@@ -43,6 +43,18 @@ const Home = () => {
       axios.get(`/api/v1/tasks/${category}/${timespan}`).then(({ data }) => setTasks(data))
     }
   }
+
+  const deleteCategory = (categor) => {
+    axios.delete(`/api/v1/categories/${categor}`)
+    setCategories(categor)
+  }
+  const saveTask = (TaskName,id) =>{
+    axios
+        .post(`/api/v1/tasks/${category}/${id}`, { title: TaskName })
+    setTasks(tasks.map((el) => (el.taskId === id ? { ...el, title:TaskName } : el)))
+
+  }
+
   return (
     <div>
       <Head title="Hello" />
@@ -53,7 +65,13 @@ const Home = () => {
           <Route
             exact
             path="/"
-            component={() => <CategoryList categories={categories} addCategory={addCategory} />}
+            component={() => (
+              <CategoryList
+                categories={categories}
+                addCategory={addCategory}
+                deleteCategory={deleteCategory}
+              />
+            )}
           />
           <Route
             exact
@@ -65,6 +83,7 @@ const Home = () => {
                 switchStatus={switchStatus}
                 deleteTask={deleteTask}
                 setTimespan={setTimespan}
+                saveTask={saveTask}
               />
             )}
           />

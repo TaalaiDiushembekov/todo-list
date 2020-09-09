@@ -134,6 +134,14 @@ server.patch('/api/v1/tasks/:category/:id', async (req, res) => {
     res.json({ status: 'error', message: 'incorrect status' })
   }
 })
+server.patch('/api/v1/tasks/:category/:id',async (req, res)=>{
+  const { category, id } = req.params
+  const newTaskName = req.body.title
+  const tasks = await read(category)
+  const updatedName = tasks.map((el) => (el.taskId === id ? { ...el, status: newTaskName } : el))
+  await write(updatedName)
+  res.json({status:'updated'})
+})
 
 server.delete('/api/v1/tasks/:category/:id', async (req, res) => {
   const { category, id } = req.params
@@ -145,8 +153,8 @@ server.delete('/api/v1/tasks/:category/:id', async (req, res) => {
 
 server.delete('/api/v1/categories/:category', async (req, res) => {
   const { category } = req.params
-  const deleted = await unlink(`${__dirname}/categories/${category}.json`)
-  res.json(deleted)
+  await unlink(`${__dirname}/categories/${category}.json`)
+  res.json({ status: 'deleted' })
 })
 
 server.use('/api/', (req, res) => {

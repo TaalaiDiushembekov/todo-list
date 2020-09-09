@@ -9,7 +9,7 @@
   {
     "taskId": "e8GTdf_sQ",
     "status": "in progress",
-    "_isDeleted": false,
+    "_isDeleted": true,
     "_createdAt": 1598007840996,
     "_daleteAt": null
   },
@@ -47,72 +47,72 @@
   {
     "taskId": "pkm7va1WA",
     "title": "",
-    "status": "new",
-    "_isDeleted": false,
+    "status": "in progress",
+    "_isDeleted": true,
     "_createdAt": 1598530307922,
     "_daletedAt": null
   },
   {
     "taskId": "Xi1M2UO5N",
     "title": "",
-    "status": "new",
-    "_isDeleted": false,
+    "status": "in progress",
+    "_isDeleted": true,
     "_createdAt": 1598530448818,
     "_daletedAt": null
   },
   {
     "taskId": "ql206t8BK",
     "title": "h",
-    "status": "new",
-    "_isDeleted": false,
+    "status": "done",
+    "_isDeleted": true,
     "_createdAt": 1598530494327,
     "_daletedAt": null
   },
   {
     "taskId": "Uv-CHdzsY3",
     "title": "hr",
-    "status": "new",
-    "_isDeleted": false,
+    "status": "done",
+    "_isDeleted": true,
     "_createdAt": 1598530494497,
     "_daletedAt": null
   },
   {
     "taskId": "V80UvG87Z8",
     "title": "hrr",
-    "status": "new",
-    "_isDeleted": false,
+    "status": "in progress",
+    "_isDeleted": true,
     "_createdAt": 1598530494656,
     "_daletedAt": null
   },
   {
     "taskId": "LE9Q_a5Qd",
     "title": "",
-    "status": "new",
-    "_isDeleted": false,
+    "status": "done",
+    "_isDeleted": true,
     "_createdAt": 1598530532452,
     "_daletedAt": null
   },
   {
     "taskId": "hcqTVFJDW",
     "title": "",
-    "status": "new",
-    "_isDeleted": false,
+    "status": "in progress",
+    "_isDeleted": true,
     "_createdAt": 1598530684823,
     "_daletedAt": null
   },
   {
     "taskId": "3nzSfR9fc_",
     "title": "",
-    "status": "new",
-    "_isDeleted": false,
+    "status": "done",
+    "_isDeleted": true,
     "_createdAt": 1598530684984,
     "_daletedAt": null
   },
   {
     "taskId": "IB718OfQm",
     "title": "",
-    "status": "new",
-    "_isDeleted": false,
+    "status": "done",
+    "_isDeleted": true,
     "_createdAt": 1598530685497,
     "_daletedAt": null
   }

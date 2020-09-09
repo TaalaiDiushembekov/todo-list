@@ -24,7 +24,11 @@ const TimeSpan = ({ setTimespan }) => {
       >
         month
       </button>
-      <button type="button" className="mr-2 bg-green-400 px-2 rounded" onClick={() => setTimespan()}>
+      <button
+        type="button"
+        className="mr-2 bg-green-400 px-2 rounded"
+        onClick={() => setTimespan()}
+      >
         all time
       </button>
     </div>

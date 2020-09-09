@@ -4,7 +4,7 @@ import { button } from '@storybook/addon-knobs'
 import { history } from '../redux'
 import trash from '../assets/images/erase.png'
 
-const CategoryList = ({ categories, addCategory }) => {
+const CategoryList = ({ categories, addCategory, deleteCategory }) => {
   const [categoryInput, setCategoryInput] = useState('')
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
@@ -17,8 +17,8 @@ const CategoryList = ({ categories, addCategory }) => {
       <h2 className="font-mono text-2xl text-center font-normal">Categories</h2>
       {categories.map((category, index) => (
         <div key={index} className=" flex justify-between py-1 font-bold">
-          <Link to={`/${category}`}>{category}</Link>
-          <button type="button">
+          <Link to={`/${category}`}>{category[0].toUpperCase() + category.slice(1)}</Link>
+          <button type="button" onClick={() => deleteCategory(category)}>
             <img src={trash} alt="" width="20px" />
           </button>
         </div>
